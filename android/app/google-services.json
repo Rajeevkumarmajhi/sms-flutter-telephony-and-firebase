@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1043674716371",
+    "project_id": "sipbazar",
+    "storage_bucket": "sipbazar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043674716371:android:061dcbbc1b9beea9265c26",
+        "android_client_info": {
+          "package_name": "com.example.telephonysms"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3AUiU02tmq5ofEyoYaV8xxVqFG2DCnO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043674716371:android:f0122638863287c1265c26",
+        "android_client_info": {
+          "package_name": "com.sipbazar.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3AUiU02tmq5ofEyoYaV8xxVqFG2DCnO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

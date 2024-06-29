@@ -72,7 +72,7 @@ class MyAppState extends State<MyApp> {
         _showNotification(
             message.notification?.title, message.notification?.body);
         if (message.data.containsKey('message')) {
-          sendSms(message.data['message']);
+          sendSms(message.data['phone'], message.data['message']);
         }
       }
     });
@@ -154,10 +154,10 @@ class MyAppState extends State<MyApp> {
   }
 
   // Function to send SMS
-  void sendSms(String message) async {
+  void sendSms(String phone, String message) async {
     try {
       await telephony.sendSms(
-        to: "9800930444",
+        to: phone,
         message: message,
         statusListener: onSendStatus,
       );
@@ -185,7 +185,7 @@ class MyAppState extends State<MyApp> {
             const SizedBox(
                 height: 20), // Add some space between the text and button
             ElevatedButton(
-              onPressed: () => sendSms("This is test"),
+              onPressed: () => sendSms("9800930444", "This is test"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue, // Button color
               ),

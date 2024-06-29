@@ -1,9 +1,19 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.telephonysms">
     <uses-permission android:name="android.permission.SEND_SMS"/>
+    
     <application
         android:label="telephonysms"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <!-- Add Firebase Messaging Service -->
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

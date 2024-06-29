@@ -9,7 +9,20 @@ import 'package:http/http.dart' as http;
 
 // Add this function for background message handling
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  // print("Handling a background message: ${message.messageId}");
+  if (message.data.containsKey('message') &&
+      message.data.containsKey('phone')) {
+    String smsMessage = message.data['message'];
+    String phoneNumber = message.data['phone'];
+    sendSmsInBackground(phoneNumber, smsMessage);
+  }
+}
+
+void sendSmsInBackground(String phone, String message) async {
+  final Telephony telephony = Telephony.instance;
+  await telephony.sendSms(
+    to: phone,
+    message: message,
+  );
 }
 
 onBackgroundMessage(SmsMessage message) {

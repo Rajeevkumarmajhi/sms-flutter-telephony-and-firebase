@@ -186,7 +186,7 @@ class MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('Auto SMS SipBazar'),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -210,6 +210,7 @@ class MyAppState extends State<MyApp> {
           ],
         ),
       ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
